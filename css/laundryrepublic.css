@@ -1,0 +1,468 @@
+/**
+	GROUPING / GRID
+	solves floating problems, by forcing the section to self clear its children
+	aka the clearfix hack). This is good in Firefox 3.5+, Safari 4+, Chrome, Opera 9+ and IE 6+.
+ */
+
+ 
+.clear {
+	clear: both;
+}
+.clearfix:before,
+.clearfix:after,
+.group:before,
+.group:after { content:""; display:table; }
+.clearfix:after,
+.group:after { clear:both;}
+.group { zoom:1; width: 100%; /* For IE 6/7 */ }
+
+.noFloat {
+	float: none !important;
+}
+
+/*  COLUMN SETUP  */
+[class*='col-'] {
+	box-sizing: border-box;
+	display: block;
+	float:left;
+	margin: 0 0 5px 0;
+	padding-right: 10px;
+	padding-right: 1rem;
+}
+
+.noMargin {
+	margin: 0 !important;
+}
+/**
+ * if a group has more elements than column then apply this to 
+ * every n-th element
+ */
+[class*='col-2']:nth-child(2n+0) { margin-right: 0; }
+[class*='col-3']:nth-child(3n+0) { margin-right: 0; }
+[class*='col-4']:nth-child(4n+0) { margin-right: 0; }
+[class*='col-5']:nth-child(5n+0) { margin-right: 0; }
+
+/*  GRID OF THREE  */
+.col-2-2 { width: 100%; }
+.col-2-1 { width: 50%; }
+
+.col-3-3 { width: 100%; }
+.col-3-2 { width: 66.66%; }
+.col-3-1 { width: 33.33%; }
+
+/* GRID OF FOUR */
+.col-4-4 { width: 100%; }
+.col-4-3 { width: 75%; }
+.col-4-2 { width: 50%; }
+.col-4-1 { width: 25%; }
+
+/* GRID OF FIVE */
+.col-5-5 { width: 100%; }
+.col-5-4 { width: 80%; }
+.col-5-3 { width: 60%; }
+.col-5-2 { width: 40%; }
+.col-5-1 { width: 20%; }
+
+.list .group {
+	width: 100%;
+	padding: 20px 0 10px ;
+}
+
+
+/*  GO FULL WIDTH BELOW 700 PIXELS */
+@media only screen and (max-width: 767px) {
+	[class*='col-'] {
+		margin: 1% 0 1% 0%;
+		width: 50%;
+	}
+	
+	[class*='col-2'] {
+		width: 100%;
+	}	
+}
+
+/*  GO FULL WIDTH BELOW 480 PIXELS */
+@media only screen and (max-width: 480px) {
+	[class*='col-']	{
+		margin: 1% 0 1% 0%;
+		width: 100%;
+	}
+}
+
+
+
+
+
+
+.signupVisibility, .loginVisibility {
+	display: none;
+}
+
+.visible {
+	display: flex !important;
+}
+.flex {
+	display: flex;
+}
+
+.button.hero-new-client-btn {
+  display: inline;
+}
+	
+.hidden {
+	display: none;
+}
+
+	
+#overlay {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+}
+
+#modal {
+    position:absolute;
+    background:url(tint20.png) 0 0 repeat;
+    background:rgba(0,0,0,0.2);
+    border-radius:14px;
+    padding:8px;
+	width: 100%;
+	z-index: 100;
+}
+
+#content {
+    border-radius:8px;
+    background:#fff;
+    padding:20px;
+}
+
+.orderProgress {
+	margin-bottom: 2em;
+}
+
+.orderProgress .orderDetails {
+	margin-bottom: 0.5em;
+	
+}
+.progressContainer {
+	background-color: #8ED4F5;
+	width: 100%;
+	height: 30px;
+	box-sizing: border-box;
+}
+
+.progressSection {
+
+	text-align: right;
+	border-right: 2px solid white;
+	width: 25%;
+	float: left;
+	height: 100%;
+}
+
+.progressComplete {
+	background-color: #27778D;
+}
+
+.circledNumber {
+	margin-top: 3px;
+	margin-right: 3px;
+	border-radius: 50%;
+	background-color: white;
+	width: 24px;
+	height: 24px;
+	line-height: 24px;
+	display: inline-block;
+	text-align: center;
+
+}
+
+.progressComplete .circledNumber {
+	background-color: #8ED4F5;
+	color: white;
+	font-weight: bold;
+}
+
+.section.content-section.blueBG {
+	background-color: #8ED4F5;
+	padding: 0;
+}
+
+.section.content-section.darkBlue {
+	background-color: #26778C;
+	padding: 0;
+	color: white;
+}
+
+.getAppSection {
+	display: flex;
+	align-items: center;
+}
+
+.getAppSection .flexChild {
+	flex-basis: 300px;
+}
+
+#sendAppLink div.inner {
+	padding: 3em 0;
+	background-image: url("/resources/img/mobile-in-hand.png");
+	background-repeat: no-repeat;
+	background-position: bottom right;
+	background-origin: border-box;
+	
+}
+
+#sendAppLink .downloadLogos {
+	margin-top: 1em;
+	max-width: 50%;
+	float: left;
+	margin-right: 2em;
+}
+
+#sendAppLink .downloadLogo {
+	display: block;
+	margin-bottom: 2em;
+}
+#sendAppLink .downloadLogo:last-child {
+	margin-bottom: 0;
+}
+
+.linkSentMessage {
+	color: white;
+	background-color: #26778C;
+	text-align: center;
+	padding: 1em;
+}
+
+.deals a.button {
+	margin-top: 1em;
+}
+
+.deals {
+}
+.deals td {
+	padding: 0.3em 0;
+	padding-right: 1em;
+	font-size: 32px;	
+}
+.standardPrice,
+.dealPrice,
+.dealSave {
+	padding-left: 0.5em;
+}
+.standardPrice {
+	text-decoration: line-through;
+	text-align: right;
+}
+.dealPrice {
+	color: red;
+	text-align: right;
+}
+.dealSave {
+	text-align: right;
+}
+
+@media (max-width: 960px) {
+	.deals td {
+		font-size: 20px;
+	}
+}
+
+.turnaround-tab-link {
+	width: 49%;
+}
+
+.logged-in-shortcuts-wrapper {
+    margin-top: 43px;
+}
+
+.numeric {
+	text-align: right;
+}
+
+.footer-menu-list {
+		-webkit-column-count: 2; /* Chrome, Safari, Opera */
+    -moz-column-count: 2; /* Firefox */
+    column-count: 2;
+	width: 100%;
+}
+.footer-menu-list li a {
+	text-decoration: none;
+    display: block;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    color: #fff;
+    font-size: 16px;
+    text-align: left;
+}
+
+.lrLink {
+    margin: auto;
+    margin-right: 0;
+	color: #26778C;
+}
+
+.content-section a {
+	color: #26778C;
+}
+
+.content-section a.button {
+	color: white;
+}
+
+.section.content-section.darkBlue h1,
+.section.content-section.darkBlue h2 {
+	color: white;
+}
+
+.testimonial {
+	font-style: italic;
+	text-align: center;	
+	padding: 2em;
+	padding-top: 1em;
+	color: #ddd;
+}
+
+.testimonial .body,
+.testimonial .name {
+	margin-top: 1em;	
+}
+
+
+
+.wrapperForm .formInputWrapper {
+	display: inline-block;
+	width: 100%;
+	padding: 3px 1% 0px 1%;
+	
+	border: 0px solid black;
+	border-radius: 3px;
+	box-shadow: rgba(64, 64, 71, 0.29) 0px 0px 0px 1px;
+	background-color: #fff;
+	
+	height: 50px;
+	position: relative;
+	margin-bottom: 10px;
+}
+
+
+.wrapperForm input,
+.wrapperForm textarea {
+	border:0px solid white;
+	outline: 0px solid white;
+	margin:0;
+	font-size: 1.2em;
+	line-height: 1.2em;
+
+	transition: all 300ms ease-in-out;
+
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+
+	-ms-border-radius: 0;
+	border-radius: 0;
+
+	width: 100%;
+	position: relative;
+	top: 2px;
+	bottom: 2px;
+}
+
+.wrapperForm .formMessageWrapper {
+	height: 10em;
+}
+
+.wrapperForm input:-webkit-autofill {
+	outline-width: 0;
+	top: 20px;
+	height: auto;
+}
+
+.wrapperForm .hasContent,
+.wrapperForm textarea:focus,
+.wrapperForm input:focus {
+	outline-width: 0;
+	top: 20px;
+}
+
+.wrapperForm .hasContent,
+.formInputWrapper input:focus {
+	height: auto;
+}
+
+.formInputWrapper input {
+	height: 98%;
+	height: calc(100% - 4px);
+	background-color: transparent;
+}
+
+
+
+.wrapperForm input:-webkit-autofill + label {
+		display: block;
+}
+
+.wrapperForm .hasContent + label,
+.wrapperForm textarea:focus + label,
+.wrapperForm input:focus + label,
+.wrapperForm input[type=hidden][value]:not([value=""]) + label {
+	display: block;
+}
+.wrapperForm input:-webkit-autofill {
+	-webkit-box-shadow:0 0 0 50px white inset; /* Change the color to your own background color */
+	-webkit-text-fill-color: #333;
+}
+.wrapperForm input:-webkit-autofill:focus {
+	-webkit-box-shadow: 0 0 0 50px white inset;
+	-webkit-text-fill-color: #333;
+	border:none;
+}
+
+.wrapperForm label {
+	display: none;
+	text-transform: uppercase;
+	font-size: 10px;
+	color: #A7A5A5;
+	position: absolute;
+	top: 0.6em;
+	z-index: 999;
+}
+
+.error {
+	color: red;
+}
+
+.error:last-child {
+	margin-bottom: 1em;
+}
+
+.accountNotes {
+	flex: 2;
+}
+
+#specialinstructions {
+	min-width: 50%;
+	height: 5em;
+}
+
+input[type=number] {
+	text-align: right;
+}
+
+#toast-container > div{
+	opacity: 1;
+}
+
+.toast-info {
+	background-color: #26778C;
+}
+
+.countdown {
+	color: orange;
+}
