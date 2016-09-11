@@ -14,6 +14,7 @@
 	
 	<link rel="stylesheet" type="text/css" href="/css/lr-redesign.webflow.css" />
 	<link rel="stylesheet" type="text/css" href="/css/laundryrepublic.css" />
+	<link rel="stylesheet" href="http://basehold.it/24">
 
 	<link rel="stylesheet" type="text/css" href="/resources/css/switches.css" />
   <!--
