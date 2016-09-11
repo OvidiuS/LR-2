@@ -16,6 +16,25 @@ $color-cyan: #02ffff;
 $color-gray-ebb: #ece6e6;
 $color-gray-swiss-coffee: #dbd3d3;
 
+$base-font-size: 1rem;
+$base-line-height: 1.25 * $base-font-size;
+
+@function type-scale($level) {
+  @return map-get(
+    map-get($type-settings, $level), 'font-size');
+}
+
+@function line-height($level) {
+  @return map-get(
+    map-get($type-settings, $level), 'line-height');
+}
+
+@mixin type-setting($level) {
+  font-size: type-scale($level);
+  line-height: line-height($level);
+}
+
+
 body {
   color: $color-gray-scorpion;
   font-family: 'Roboto', sans-serif;
