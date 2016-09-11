@@ -4,7 +4,9 @@
 	<meta charset="utf-8">
 	<title>Laundryrepublic</title>
 	
-	<link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed" rel="stylesheet" />
+	<!-- <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed" rel="stylesheet" /> -->
+
+	<link href="https://fonts.googleapis.com/css?family=Josefin+Sans:600,600i|Montserrat:700|Roboto:400,400i,700,700i" rel="stylesheet">
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 
