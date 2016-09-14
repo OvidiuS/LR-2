@@ -8,18 +8,18 @@
 
 <?php require("includes/header.inc") ?>
 
-<div class="w-section voucher-bar">
+<div class="section voucher-bar">
 	<a class="voucher-link" href="new-user/find-a-location.html">Get 25% off your first order!</a>
 </div>
 
-<div class="w-section section hero-section">
+<div class="section hero-section">
 	<div class="wide-container">
-		<div class="w-row">
+		<div class="row">
 			<div class="w-col w-col-6 hero-left-column">
 				<div class="hero-login-wrapper">
 
-					<h1 class="hero-login-heading">Freedom from dry cleaning and laundry is one step away</h1>
-					<div class="w-form">
+					<h1>Freedom from dry cleaning and laundry is one step away</h1>
+					<div class="form-wrapper">
 						<form action="/" class="login-form loginVisibility" data-name="Login Form" id="login-form" name="login-form" method="post">
 							<input type="hidden" name="action" id="loginAction" value="laundryRepublic/customers/login" />
 							<input type="hidden" name="redirect" id="redirect" value="customer-home" />
@@ -30,8 +30,8 @@
 							<label class="hero-login-label" for="password-3">Password:</label>
 							<input class="w-input login-field last" data-name="Password 3" id="password" maxlength="256" name="password" placeholder="password" required="required" type="password">
 
-							<input class="w-button button hero-login-btn login" data-wait="Please wait..." type="submit" name="loginButton" value="Login" />
-							<input class="w-button button hero-login-btn hidden reset" data-wait="Please wait..." type="submit" name="resetButton" value="Request password reset email" />
+							<input class="button hero-login-btn login" data-wait="Please wait..." type="submit" name="loginButton" value="Login" />
+							<input class="button hero-login-btn hidden reset" data-wait="Please wait..." type="submit" name="resetButton" value="Request password reset email" />
 						</form>
 
 						<form action="/confirm-location" class="w-clearfix new-client-form signupVisibility visible" data-name="Signup Form" id="signup-form" name="signup-form" method="post">
@@ -41,7 +41,7 @@
 							<label class="hero-login-label" for="postcode">Postcode:</label>
 							<input class="w-input login-field postal-code" data-name="postcode" id="postcode" maxlength="256" name="postcode" placeholder="your full postcode" required="required" type="text">
 
-							<input class="w-button button hero-new-client-btn" data-wait="Please wait..." type="submit" value="Get started">
+							<input class="button hero-new-client-btn" data-wait="Please wait..." type="submit" value="Get started">
 						</form>
 					</div>
 
@@ -53,7 +53,7 @@
 					</div>
 
 					<div class="hero-login-button-wrapper signupVisibility visible">
-						<a class="w-button button login" href="#">Login</a>
+						<a class="button login" href="#">Login</a>
 						<a href="#" class="resetPassword lrLink">I forgot my password</a>
 					</div>
 
@@ -65,7 +65,7 @@
 					</div>
 
 					<div class="hero-login-button-wrapper loginVisibility">
-						<a class="w-button button signup" href="#">Sign-up now</a>
+						<a class="button signup" href="#">Sign-up now</a>
 						<a href="#" class="resetPassword lrLink" >I forgot my password</a> <a href="#" class="loginLink lrLink hidden">I remember my password</a>
 					</div>
 					<script>
@@ -121,14 +121,14 @@
 
 
 			<div class="w-col w-col-6 hero-right-column">
-				<h1 class="hero-second-column-main-heading">Laundry Republic</h1>
-				<ul class="w-list-unstyled hero-list">
-					<li class="hero-list-item">Secure drop points in your building</li>
-					<li class="hero-list-item">On demand (no&nbsp;delivery slots)</li>
-					<li class="hero-list-item">Five-star reviews</li>
-					<li class="hero-list-item">Free delivery (next day option)</li>
-					<li class="hero-list-item">Secure drop points in your building</li>
-					<li class="hero-list-item">Better for the environment</li>
+				<h1>Laundry Republic</h1>
+				<ul class="hero-list">
+					<li>Secure drop points in your building</li>
+					<li>On demand (no&nbsp;delivery slots)</li>
+					<li>Five-star reviews</li>
+					<li>Free delivery (next day option)</li>
+					<li>Secure drop points in your building</li>
+					<li>Better for the environment</li>
 				</ul>
 			</div>
 			<!-- /.w-col w-col-6 hero-right-column -->
@@ -137,20 +137,22 @@
 	</div>
 	<!-- /.wide-container -->
 </div>
-<!-- /.w-section section hero-section -->
+<!-- /.section hero-section -->
 
-<div class="w-section section homepage-press">
-	<div class="wide-container press"><img class="press-evening-standard" src="images/eb45c0_f89a85665fa64ec0b9267a4933e931d6.png">
-		<div class="press-customer-ratings">Over 2,000 five-star customer&nbsp;ratings</div><img class="press-evening-standard" src="images/eb45c0_406eed3cb96a4afaa64ced9eddc9c706.png">
+<div class="section homepage-press">
+	<div class="wide-container press">
+		<img class="press-evening-standard" src="images/eb45c0_f89a85665fa64ec0b9267a4933e931d6.png">
+		<div class="press-customer-ratings">Over 2,000 five-star customer&nbsp;ratings</div>
+		<img class="press-evening-standard" src="images/eb45c0_406eed3cb96a4afaa64ced9eddc9c706.png">
 		<div class="million">1m+ garments cleaned</div>
 	</div>
 </div>
 
-<div class="w-section section content-section" id="how-it-works">
+<div class="section content-section" id="how-it-works">
 	<div class="wide-container">
 
 		<h1 class="centered">How It Works</h1>
-		<div class="w-row how-it-works-graphic-wrapper">
+		<div class="row how-it-works-graphic-wrapper">
 			<div class="w-col w-col-4">
 				<div class="how-it-works-step-wrapper">
 					<h2 class="how-it-works-step-title">1. Drop Off</h2><img class="how-it-works-image drop-off" src="images/drop-off-icon.png">
@@ -175,7 +177,7 @@
 		</div>	  
 	</div>
 	
-	<div class="w-section section content-section blueBG" id="sendAppLink">
+	<div class="section content-section blueBG" id="sendAppLink">
 		<div class="wide-container inner clearfix">
 			<h1>Get the APP</h1>
 			
@@ -192,7 +194,7 @@
 						<input type="hidden" name="redirect" value="customer-home" />
 						
 						<input type="text" placeholder="Mobile number" name="mobileNumber" id="mobileNumber" class="w-input" />
-						<button type="submit" class="w-button button">Request link</button>
+						<button type="submit" class="button">Request link</button>
 
 					</form>
 				</div>
@@ -206,7 +208,7 @@
 		</div>
 	</div>
 	
-	<div class="w-section section content-section darkBlue" id="testimonials">
+	<div class="section content-section darkBlue" id="testimonials">
 		<div class="wide-container clearfix">
 
 			<h1>What our lovely customers say</h1>
@@ -227,7 +229,7 @@
 		</div>
 	</div>
 	
-	<div class="w-section section content-section ">
+	<div class="section content-section ">
 		<div class="wide-container deals">
 			<h1>Our Prices</h1>
 			<h2>Deals</h2>
@@ -269,22 +271,22 @@
 					<td class="dealSave">(save 15%)</td>
 				</tr>
 			</table> 
-			<a href="/prices.php" class="w-button button" >view all prices ...</a>
+			<a href="/prices.php" class="button" >view all prices ...</a>
 		</div>
 		<!-- /.wide-container deals -->
 	</div>
-	<!-- /.w-section section content-section -->
+	<!-- /.section content-section -->
 </div>
-<!-- /.w-section section content-section #how-it-works -->
+<!-- /.section content-section #how-it-works -->
 
 
-<div class="w-section section footer-section">
+<div class="section footer-section">
 	<div class="wide-container">
-		<div class="w-row">
+		<div class="row">
 			<div class="w-col w-col-6 footer-column-1">
-				<div class="w-row footer-nav">
+				<div class="row footer-nav">
 					<div class="w-col w-col-6 w-col-small-6 footer-menu-column-1 footer-menu-list">
-						<ul class="w-list-unstyled">
+						<ul class="">
 							<li><a href="http://craft.laundryrepublic.dev/sustainable-garment-care-1" title="Sustainable garment care">Sustainable garment care</a></li>
 							<li><a href="http://craft.laundryrepublic.dev/customer-satisfaction-guarantee" title="Customer Satisfaction Guarantee">Customer Satisfaction Guarantee</a></li>
 							<li><a href="http://craft.laundryrepublic.dev/faqs/how-do-i-pay-for-my-order" title="FAQ">FAQ</a></li>
@@ -293,7 +295,7 @@
 						</ul>
 					</div>
 				</div>
-				<!-- /.w-row .footer-nav -->
+				<!-- /.row .footer-nav -->
 			</div>
 			<!-- /.wcol .wcol-6 .footer-column-1 -->
 
@@ -309,7 +311,7 @@
 			</div>
 			<!-- /.wcol .wcol-6 .footer-column-2 -->
 		</div>
-		<!-- /.w-row -->
+		<!-- /.row -->
 	</div>
 	<!-- /.wide-container -->
 </div>
