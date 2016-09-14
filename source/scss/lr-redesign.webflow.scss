@@ -23,8 +23,28 @@ $font-josefin: 'Josefin Sans', sans-serif;
 $font-roboto: 'Roboto', sans-serif;
 
 // base units
-$base-font-size: 1rem;
-$base-line-height: 1.25 * $base-font-size;
+$base-font-size: 1.125rem;
+$base-line-height: 1.33333 * $base-font-size;
+
+$type-settings: (
+  -1: (
+    font-size: 0.75rem,
+    line-height: $base-line-height
+  ),
+  0: (
+    font-size: 1rem,
+    line-height: $base-line-height
+  ),
+  1: (
+    font-size: 1.618rem,
+    line-height: $base-line-height * 2
+  ),
+  2: (
+    font-size: 2.618rem,
+    line-height: $base-line-height * 2
+  )
+);
+
 
 @function type-scale($level) {
   @return map-get(
@@ -45,17 +65,16 @@ $base-line-height: 1.25 * $base-font-size;
 body {
   color: $color-gray-scorpion;
   font-family: 'Roboto', sans-serif;
-  font-size: 18px;
-  line-height: 20px;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
 }
 
 h1 {
   color: $color-bluegreen-malibu-lr;
-  font-size: 38px;
+  @include type-setting(2);
   font-weight: 600;
-  line-height: 44px;
-  margin-bottom: 10px;
-  margin-top: 20px;
+  margin-bottom: $base-line-height * 2;
+  margin-top: 0;
 }
 
 h2 {
@@ -63,24 +82,40 @@ h2 {
   font-size: 32px;
   font-weight: 700;
   line-height: 36px;
-  margin-bottom: 10px;
-  margin-top: 20px;
+  margin-bottom: $base-line-height;
 }
 
 h3 {
   font-size: 24px;
   font-weight: 700;
   line-height: 30px;
-  margin-bottom: 10px;
-  margin-top: 20px;
+  margin-bottom: $base-line-height;
+}
+
+.w-nav-link {
+  @include type-setting(0);
+  padding-bottom: $base-line-height *1.5;
+  padding-top: $base-line-height *1.5;
+}
+
+.w-button {
+  @include type-setting(1);
+  padding: 0;
 }
 
 .section {
 
   &.header-section {
     background-color: $color-blue-malibu-lr;
-    padding-bottom: 7px;
-    padding-top: 7px;
+
+  }
+
+  &.hero-section {
+    background-image: url('../images/eb45c0_aa07282e94e6433e922ee9251a54596e.jpg');
+    background-position: 100% 50%;
+    background-size: cover;
+    padding-bottom: $base-line-height * 3;
+    padding-top: $base-line-height * 3;
   }
 
   &.footer-section {
@@ -98,14 +133,6 @@ h3 {
       padding-bottom: 48px;
       padding-top: 48px;
     }
-  }
-
-  &.hero-section {
-    background-image: url('../images/eb45c0_aa07282e94e6433e922ee9251a54596e.jpg');
-    background-position: 100% 50%;
-    background-size: cover;
-    padding-bottom: 55px;
-    padding-top: 57px;
   }
 
   &.homepage-press {
@@ -228,7 +255,6 @@ h3 {
 .main-nav-container {
   background-color: transparent;
   float: right;
-  margin-top: 10px;
 }
 
 .main-nav-wrapper {
@@ -239,27 +265,27 @@ h3 {
   display: none;
 }
 
+h1.hero-second-column-main-heading {
+  margin-bottom:  $base-line-height * .25;
+}
 .hero-list-item {
+  @include type-setting(0);
+  line-height: $base-line-height ;
   background-image: url('../images/checkmark.png');
   background-position: 0 50%;
   background-repeat: no-repeat;
-  padding-bottom: 10px;
-  padding-left: 41px;
-  padding-top: 10px;
+  padding: ($base-line-height * .5) 0 ($base-line-height * .5) 40px;
 }
 
 .hero-list {
   color: $color-gray-scorpion;
-  font-size: 26px;
-  margin-top: 30px;
 }
 
 .hero-login-wrapper {
   background-color: $color-white-transparent;
   border-radius: 9px;
   box-shadow: 0 0 6px 0 $color-pure-white;
-  margin-top: 42px;
-  padding: 5px 18px 19px;
+  padding: (1 * $base-line-height) 18px;
 
   &.returning-user {
     margin-left: 23%;
@@ -343,14 +369,13 @@ h3 {
 }
 
 .login-field {
+  @include type-setting(1);
   box-flex: 1;
   display: inline-block;
   flex: 1;
-  line-height: 1.9em;
   margin-right: 6px;
-  padding-bottom: 14px;
-  padding-top: 14px;
   width: 48%;
+  padding:0;
 
   &.last {
     margin-right: 0;
@@ -367,14 +392,11 @@ h3 {
 }
 
 .hero-left-column {
-  padding-left: 44px;
-  padding-right: 44px;
-  padding-top: 7px;
+  padding-left: $base-line-height;
+  padding-right: $base-line-height;
 }
 
 .hero-login-heading {
-  line-height: 1.25em;
-  margin-bottom: 20px;
   text-align: center;
 
   &.logged-in {
@@ -382,15 +404,6 @@ h3 {
     padding-right: 38px;
     text-align: left;
   }
-}
-
-.hero-second-column-main-heading {
-  font-size: 42px;
-}
-
-.hero-second-column-subheading {
-  display: none;
-  font-size: 26px;
 }
 
 .footer-menu-item {
@@ -477,18 +490,17 @@ h3 {
 }
 
 .desktop-phone-no {
+  @include type-setting(2);
   background-image: url('../images/telephone-icon.png');
   background-position: 0 50%;
   background-repeat: no-repeat;
   background-size: 25px;
   color: $color-white-rose-white;
   display: inline-block;
-  font-size: 28px;
   margin-left: 20px;
-  margin-top: 25px;
-  padding-bottom: 7px;
+  margin-top: $base-line-height;
+  margin-bottom: $base-line-height;
   padding-left: 34px;
-  padding-top: 7px;
 }
 
 .user-menu-button {
@@ -887,12 +899,11 @@ h3 {
 .voucher-bar {
   background-color: $color-bluegreen-malibu-lr;
   color: $color-pure-white;
-  padding-bottom: 4px;
-  padding-top: 4px;
   text-align: center;
 }
 
 .voucher-link {
+  @include type-setting(0);
   color: $color-pure-white;
 }
 

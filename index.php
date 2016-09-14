@@ -122,7 +122,6 @@
 
 			<div class="w-col w-col-6 hero-right-column">
 				<h1 class="hero-second-column-main-heading">Laundry Republic</h1>
-				<h2 class="hero-second-column-subheading">Freedom from dry cleaning and laundry</h2>
 				<ul class="w-list-unstyled hero-list">
 					<li class="hero-list-item">Secure drop points in your building</li>
 					<li class="hero-list-item">On demand (no&nbsp;delivery slots)</li>
