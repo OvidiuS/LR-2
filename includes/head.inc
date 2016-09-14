@@ -11,11 +11,11 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 
 	<link rel="stylesheet" type="text/css" href="/css/normalize.css" />
-	<link rel="stylesheet" type="text/css" href="/css/webflow.css" />
+	<!-- <link rel="stylesheet" type="text/css" href="/css/webflow.css" /> -->
 	<link rel="stylesheet" type="text/css" href="/resources/plugins/toastr/toastr.min.css" />
 	
-	<link rel="stylesheet" type="text/css" href="/css/lr-redesign.webflow.css" />
-	<link rel="stylesheet" type="text/css" href="/css/laundryrepublic.css" />
+	<link rel="stylesheet" type="text/css" href="/css/styles.css" />
+	<!-- <link rel="stylesheet" type="text/css" href="/css/laundryrepublic.css" /> -->
 	<link rel="stylesheet" href="http://basehold.it/24">
 
 	<link rel="stylesheet" type="text/css" href="/resources/css/switches.css" />
@@ -38,7 +38,7 @@
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 	<script type="text/javascript" src="/resources/plugins/toastr/toastr.min.js"></script>
 	
-	<script type="text/javascript" src="/js/webflow.js"></script>
+	<!-- <script type="text/javascript" src="/js/webflow.js"></script> -->
 	
 	<script type="text/javascript" src="/js/global.js"></script>
 	

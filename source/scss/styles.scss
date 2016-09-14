@@ -1,0 +1,106 @@
+$color-pure-white: #fff;
+$color-blue-malibu-lr: #8ED4F5;
+$color-gray-scorpion: #605e5e;
+$color-bluegreen-malibu-lr: #26778c;
+$color-black-mineshaft: #2f2e2e;
+$color-gray-silver: #ccc;
+$color-red-hibiscus: #cc3163;
+$color-white-transparent: hsla(0, 0%, 100%, .88);
+$color-blue-lilly-white: #e9f8ff;
+$color-red-alizarin-crimson: #e21717;
+$color-gray-boulder: #797676;
+$color-blue-gull-gray: #9cb3b9;
+$color-white-rose-white: #fff8f8;
+$color-dove-gray: #6f6f6f;
+$color-cyan: #02ffff;
+$color-gray-ebb: #ece6e6;
+$color-gray-swiss-coffee: #dbd3d3;
+
+// fonts stacks
+
+$font-montserrat: 'Montserrat', sans-serif;
+$font-josefin: 'Josefin Sans', sans-serif;
+$font-roboto: 'Roboto', sans-serif;
+
+// base units
+$base-font-size: 1.125rem;
+$base-line-height: 1.33333 * $base-font-size;
+
+$type-settings: (
+  -1: (
+    font-size: 0.75rem,
+    line-height: $base-line-height
+  ),
+  0: (
+    font-size: 1rem,
+    line-height: $base-line-height
+  ),
+  1: (
+    font-size: 1.618rem,
+    line-height: $base-line-height * 2
+  ),
+  2: (
+    font-size: 2.618rem,
+    line-height: $base-line-height * 2
+  )
+);
+
+
+@function type-scale($level) {
+  @return map-get(
+    map-get($type-settings, $level), 'font-size');
+}
+
+@function line-height($level) {
+  @return map-get(
+    map-get($type-settings, $level), 'line-height');
+}
+
+@mixin type-setting($level) {
+  font-size: type-scale($level);
+  line-height: line-height($level);
+}
+
+
+body {
+  color: $color-gray-scorpion;
+  font-family: 'Roboto', sans-serif;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+}
+
+h1 {
+  color: $color-bluegreen-malibu-lr;
+  @include type-setting(2);
+  font-weight: 600;
+  margin-bottom: $base-line-height * 2;
+  margin-top: 0;
+}
+
+h2 {
+  color: $color-bluegreen-malibu-lr;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 36px;
+  margin-bottom: $base-line-height;
+}
+
+h3 {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 30px;
+  margin-bottom: $base-line-height;
+}
+
+.w-nav-link {
+  @include type-setting(0);
+  padding-bottom: $base-line-height *1.5;
+  padding-top: $base-line-height *1.5;
+}
+
+.w-button {
+  @include type-setting(1);
+  padding: 0;
+}
+
+
