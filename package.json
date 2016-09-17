@@ -1,22 +1,31 @@
 {
-  "name": "laundry-republic",
+  "name": "webpack-learn",
   "version": "1.0.0",
-  "description": "learning gulp",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Ovi Savescu :)",
+  "author": "",
   "license": "ISC",
   "devDependencies": {
+    "autoprefixer": "^6.4.1",
     "breakpoint-sass": "^2.7.0",
     "breakpoint-slicer": "^2.0.0",
-    "browser-sync": "^2.14.0",
-    "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^3.1.1",
-    "gulp-plumber": "^1.1.0",
-    "gulp-sass": "^2.3.2",
-    "gulp-sourcemaps": "^1.6.0",
-    "gulp-util": "^3.0.7"
+    "browser-sync": "^2.16.0",
+    "browser-sync-webpack-plugin": "^1.1.2",
+    "css-loader": "^0.25.0",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "node-sass": "^3.10.0",
+    "postcss-loader": "^0.13.0",
+    "sass-loader": "^4.0.2",
+    "sass-toolkit": "^2.10.0",
+    "style-loader": "^0.13.1",
+    "susy": "^2.2.12",
+    "webfontloader": "^1.6.26",
+    "webpack": "^1.13.2"
+  },
+  "dependencies": {
+    "jquery": "^3.1.0"
   }
 }
